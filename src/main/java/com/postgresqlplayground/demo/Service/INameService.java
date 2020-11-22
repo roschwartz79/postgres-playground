@@ -10,4 +10,5 @@ import java.util.List;
 public interface INameService {
     List<Names> findAll();
     long getCount();
+    void addPerson(Names names);
 }

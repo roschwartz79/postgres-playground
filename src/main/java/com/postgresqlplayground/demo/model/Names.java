@@ -1,8 +1,6 @@
 package com.postgresqlplayground.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 // To specify this is an entity to be used with postgres, we need these 2 annotations
 // We can map out what table this entity maps to with the @Table annotation
@@ -15,10 +13,10 @@ public class Names {
     // We need to provide an Id, in this scenario, I set up a a pk that auto increments.
     // The auto increment is done on the postgres side in this example, not the spring side!
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int pk;
 
-    public Names (int pk, String name, String email, int age){
-        this.pk = pk;
+    public Names (String name, String email, int age){
         this.name = name;
         this.email = email;
         this.age = age;

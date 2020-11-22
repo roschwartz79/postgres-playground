@@ -3,8 +3,8 @@ package com.postgresqlplayground.demo.Controller;
 import com.postgresqlplayground.demo.Service.INameService;
 import com.postgresqlplayground.demo.model.Names;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -25,6 +25,13 @@ public class myController {
         // Getting the count of items in the DB!
         var count = service.getCount();
         return count;
+    }
+
+    @PostMapping("/addPerson")
+    @ResponseBody
+    public String addPerson(@RequestParam String name, @RequestParam String email, @RequestParam int age) {
+        service.addPerson(new Names(name, email, age));
+        return "Name " + name + " saved in the database!";
     }
 
 }

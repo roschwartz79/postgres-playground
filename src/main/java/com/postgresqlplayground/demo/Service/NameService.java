@@ -27,4 +27,10 @@ public class NameService implements INameService {
     public long getCount(){
         return repository.count();
     }
+
+    @Override
+    public void addPerson(Names name) {
+        repository.save(name);
+    }
+
 }
