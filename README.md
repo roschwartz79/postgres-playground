@@ -1,5 +1,5 @@
 # postgres playground
-Learning and collecting information about Postgres!
+Learning and collecting information about Postgres, Spring-data and Hibernate!
 
 ## Setup
 I started a local cluster of Postgres, and use that to interact with while running this app. The role 'rob' with password 'xxx' 
