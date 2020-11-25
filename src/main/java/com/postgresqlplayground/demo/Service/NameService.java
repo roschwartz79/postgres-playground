@@ -3,6 +3,7 @@ package com.postgresqlplayground.demo.Service;
 import com.postgresqlplayground.demo.Repository.NamesRepository;
 import com.postgresqlplayground.demo.model.Names;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,6 +32,11 @@ public class NameService implements INameService {
     @Override
     public void addPerson(Names name) {
         repository.save(name);
+    }
+
+    @Override
+    public void deletePerson(Names name){
+        repository.delete(name);
     }
 
 }

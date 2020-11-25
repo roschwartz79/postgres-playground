@@ -1,7 +1,6 @@
 package com.postgresqlplayground.demo.Service;
 
 import com.postgresqlplayground.demo.model.Names;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -11,4 +10,5 @@ public interface INameService {
     List<Names> findAll();
     long getCount();
     void addPerson(Names names);
+    void deletePerson(Names name);
 }
