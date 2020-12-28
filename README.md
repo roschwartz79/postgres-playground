@@ -22,3 +22,7 @@ Data and the embedded Hibernate framework here, so that works that into this pro
 More about postgres can be found [here](https://github.com/roschwartz79/my-notes/blob/main/postgres-notes.md), but we can
 mess around inside the DB, see what tables are there (`\d`), or even what databases are currently on the server (`\l`), 
 and whenever we screw something up just restart the app and all will be good! Happy hacking!
+
+## Wishlist
+- Bash script [IN PROGERSS]: Create a bash script that can perform DB setup, as well as curl requests right from the command line!
+No insomnia needed, plus, some good bash practice. Use the current version of the script with `./api_requests.sh`
